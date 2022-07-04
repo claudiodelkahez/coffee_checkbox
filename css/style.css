@@ -1,0 +1,80 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #fab142;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 30px;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+    position: absolute;
+    height: 350px;
+    width: 350px;
+    background-color: #ffffff;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    position: absolute;
+    height: 100px;
+    width: 200px;
+    background-color: #f2f2f2;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+label[for="cup"] {
+    position: absolute;
+    background-color: #cccccc;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 75.5px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    box-shadow: inset -6px 6px rgba(0, 0, 0, 0.2);
+    border: 10px solid #e7e7e7;
+    cursor: pointer;
+    transition: 0.5s;
+}
+label[for="cup"]:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    height: 10px;
+    width: 30px;
+    background-image: linear-gradient(to left, #bebebe 30%, #cccccc 30%);
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: -37px;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #fab142;
+}
+
+input[type="checkbox"]:checked + label[for="cup"] {
+    transform: translateX(100px) rotate(180deg);
+    background-color: #6e4c42;
+    box-shadow: inset 6px -6px rgba(0, 0, 0, 0.2);
+}
